@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  padding: 15px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #157347;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #343a40;
+  color: white;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Status colors */
+.status-open {
+  color: red;
+  font-weight: bold;
+}
+
+.status-close {
+  color: green;
+  font-weight: bold;
+}
+
+.status-progress {
+  color: orange;
+  font-weight: bold;
+}
+.btn-center {
+  text-align: center;
+}
+
+.status-open {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.status-progress {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-close {
+  color: green;
+  font-weight: bold;
+}
+
+.action-box {
+  display: none;
+  margin-top: 6px;.action-box {
+  display: none;
+  margin-top: 6px;
+}
+
+.action-box button {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dump Records</title>
+  <link rel="stylesheet" href="../css/dump.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <h2>Dump - Abnormalities Records</h2>
+    <button onclick="exportToExcel()">Export to Excel</button>
+  </div>
+<div class="table-container">
+  <table id="dumpTable">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Date</th>
+        <th>Shift</th>
+        <th>Identify By</th>
+        <th>Department</th>
+        <th>Line</th>
+        <th>Area</th>
+        <th>Description</th>
+        <th>Tag Type</th>
+        <th>Abnormalities Type </th>
+        <!-- <th>Image</th> -->
+        <th>Assign To</th>
+        <!-- <th>Spare Maintenanc e</th> -->
+        <th>Status</th>
+        <th>Closure Date </th>
+        <th>Action Taken</th>
+        <!-- <th>Status</th> -->
+        <th>Closed By</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  </div>
+<div class="btn-center">
+  <button onclick="goBack()">⬅ Back to Dashboard</button>
+</div>
+
+<!-- <button onclick="saveDumpToFirebase()">Save Dump</button> -->
+
+<script type="module" src="../js/dump.js"></script>
+
+  <!-- <script src="../js/dump.js"></script> -->
+</body>
+</html>

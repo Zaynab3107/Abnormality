@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Analysis - Abnormality Tracker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Progress Bar Styling */
+        .progress-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .progress-bg {
+            flex-grow: 1;
+            background: #e0e0e0;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .btn-back { background-color: #6c757d; color: white; }
+        .btn-export { background-color: #28a745; color: white; }
+        .btn:hover { opacity: 0.9; }
+
+        @media (max-width: 600px) {
+            table { font-size: 12px; }
+            .progress-bg { display: none; } /* Mobile par sirf % dikhayenge */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Department-wise Performance Analysis</h2>
+
+    <div class="header-actions">
+        <button class="btn btn-back" onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+    </div>
+
+    <div class="table-container"> 
+    <table id="analysisTable">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th style="text-align: center;">Identified</th>
+                <th style="text-align: center;">Mitigated</th>
+                <th>Compliance (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td colspan="4" style="text-align: center;">Loading data...</td></tr>
+        </tbody>
+    </table>
+
+    <hr style="margin-top: 40px; border: 0; border-top: 1px solid #eee;">
+
+    <h2 style="margin-top: 30px;">Line-wise Performance Analysis</h2>
+    <table id="lineAnalysisTable">
+        <thead>
+            <tr>
+                <th>Line Name</th>
+                <th style="text-align: center;">Identified</th>
+                <th style="text-align: center;">Mitigated</th>
+                <th>Compliance (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td colspan="4" style="text-align: center;">Loading line data...</td></tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+<!-- 
+<div class="container">
+    <h2>Department-wise Performance Analysis</h2>
+
+    <div class="header-actions">
+        <button class="btn btn-back" onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+        <button class="btn btn-export" onclick="exportAnalysisToExcel()">Export Report</button>
+    </div>
+
+    <table id="analysisTable">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th style="text-align: center;">Identified</th>
+                <th style="text-align: center;">Mitigated</th>
+                <th>Compliance (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4" style="text-align: center;">Loading data...</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h2 style="margin-top: 50px;">Line-wise Performance Analysis</h2>
+<table id="lineAnalysisTable">
+    <thead>
+        <tr>
+            <th>Line Name</th>
+            <th style="text-align: center;">Identified</th>
+            <th style="text-align: center;">Mitigated</th>
+            <th>Compliance (%)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="4" style="text-align: center;">Loading line data...</td>
+        </tr>
+    </tbody>
+</table> -->
+    <script type="module" src="../JS/analysis.js"></script>
+</body>
+</html>

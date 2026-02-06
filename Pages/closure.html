@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure</title>
+  <link rel="stylesheet" href="../css/newclosure.css">
+</head>
+<body>
+
+  <h2>Closure</h2>
+
+
+    <form id="closureForm" onsubmit="updateClosure(event)">
+   
+
+    <label>Description</label>
+    <textarea id="desc" readonly></textarea>
+
+    <!-- Date of Closure -->
+    <h3>Date of Closure</h3>
+    <input type="date" id="closureDate" required>
+
+    <!-- Action Taken -->
+    <h3>Action Taken</h3>
+    <textarea id="actionTaken" placeholder="Enter action taken" required></textarea>
+
+
+    <h3>Status</h3>
+<div class="status">
+  <label class="status-option open">
+    <input type="radio" name="status" value="Open" required>
+    Open
+  </label>
+
+  <label class="status-option progress">
+    <input type="radio" name="status" value="In Progress">
+    In Progress
+  </label>
+
+  <label class="status-option close">
+    <input type="radio" name="status" value="Close">
+    Close
+  </label>
+</div>
+
+
+    <!-- Image  -->
+    <h3>Image (optional)</h3>
+    <input type="file" id="image">
+
+    <!-- Close By -->
+    <h3>Close By</h3>
+    <input type="text" id="closedBy" placeholder="Name" required>
+
+    <button type="submit">Submit Closure</button>
+    <p id="msg"></p>
+
+  </form>
+
+  <button onclick="goBack()">⬅ Back to Dashboard</button>
+
+  <script type="module" src="../js/closure.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Container */
+#closureForm {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Headings */
+h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px 0;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Inputs & Textareas */
+input[type="text"],
+input[type="date"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* Padding handling */
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Readonly Styling */
+#desc {
+  background-color: #f9f9f9;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* Status Radio Options */
+.status {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.status-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s, background 0.3s;
+  border: 1px solid #eee;
+}
+
+.status-option input {
+  margin-right: 8px;
+}
+
+/* Status Colors */
+.open { background-color: #fff5f5; color: #e74c3c; }
+.progress { background-color: #fff9db; color: #f39c12; }
+.close { background-color: #ebfbee; color: #27ae60; }
+
+.status-option:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  background-color: #2ecc71;
+  color: white;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #27ae60;
+  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+/* Back Button Styling */
+button[onclick*="goBack"] {
+  background: transparent;
+  color: #7f8c8d;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+}
+
+button[onclick*="goBack"]:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+/* Message Text */
+#msg {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}

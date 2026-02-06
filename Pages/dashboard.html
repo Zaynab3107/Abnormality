@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container">
+
+    <!-- Left Menu -->
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li onclick="openReport()">Report Abnormalities</li>
+        <li onclick="openDump()">Dump</li>
+        <li onclick="openClosure()">Closure</li>
+        <li onclick="openAnalysis()">Analysis</li>
+
+      </ul>
+    </div>
+    <main class="content-area">
+      <!-- <div class="overlay-text"> -->
+        <!-- <h1 id="welcome-msg">Welcome to Dashboard</h1>
+        <p id="msg">Select an option from the menu to get started.</p> -->
+      <!-- </div> -->
+    </main>
+  </div>
+
+    <!-- Center Content -->
+    <!-- <div class="content">
+      <img src="image.jpg" alt="Center Image" />
+      <p id="msg"></p>
+    </div> -->
+
+
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

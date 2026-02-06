@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abnormalities Report</title>
+  <link rel="stylesheet" href="../css/common.css">
+  
+</head>
+<body>
+<!-- <form id="reportForm"> -->
+  <form id="reportForm" onsubmit="return submitForm(event)">
+
+    <h1>Report Abnormalities</h1>
+    <h3>Date of Observation </h3>
+    <input type="date" id="date" placeholder="(MM/DD/YYYY)" required>
+
+    <select  id="shift" required>
+        <option value="">Select Shift</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="C">G</option>
+    </select>
+
+    <h3>Identify by </h3>
+    <input type="text" id="identifyBy" placeholder="Enter name " required>
+    <br>
+<!-- Department -->
+<label for="department">Department</label>
+<select id="department">
+  <option value="">Select Department</option>
+  <option value="Production">Production</option>
+  <option value="Safety">Safety</option>
+   <option value="shipping">Shipping</option>
+  <option value="Stores">Stores</option>
+  <option value="Admin">Admin</option>
+  <option value="Utility">Utility</option>
+  <option value="Quality">Quality</option>
+  <option value="Maintenance">Maintenance</option>
+</select>
+
+<!-- Production Line -->
+<div id="lineDiv" style="display:none;">
+  <label for="line">Line</label>
+  <select id="line">
+    <option value="">Select Line</option>
+  </select>
+</div>
+
+<!-- Equipment -->
+<div id="equipmentDiv" style="display:none;">
+  <label for="equipment">Equipment</label>
+  <select id="equipment">
+    <option value="">Select Equipment</option>
+  </select>
+</div>
+
+<!-- Area -->
+<div id="areaDiv" style="display:none;">
+  <label for="area">Area</label>
+  <select id="area">
+    <option value="">Select Area</option>
+  </select>
+</div>
+
+
+
+    <h3>Describe Abnormalities</h3>
+    <input type="text" id="decAbnormalities" placeholder="Enter your Abmormality " required>
+<!-- 
+    <h3>Tag type</h3>
+<input type="radio" name="color" value="Red"> Red
+<input type="radio" name="color" value="White"> White -->
+<div class="tag-container">
+  <h3>Tag type</h3>
+  
+  <label class="radio-option">
+    <input type="radio" name="tag" value="red" checked>
+    <span>Red</span>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="tag" value="white">
+    <span>White</span>
+  </label>
+</div>
+
+
+
+    <h3>Types of Abnormalities</h3>
+    <select  id="types"required>
+        <option value="">Select Types</option>
+        <option value="Minor Flaws">Minor Flaws</option>
+        <option value="Unfulfiled Basic Condition">Unfulfiled Basic Condition</option>
+        <option value="Hard to Access">Hard to Access</option>
+        <option value="Quality defects">Quality defects</option>
+        <option value="Unnecessary / Non Urgent Item">Unnecessary / Non Urgent Item</option>
+        <option value="Sorce of Contamination">Sorce of Contamination</option>
+        <option value="Unsafe Place / Condition">Unsafe Place / Condition</option>
+    </select>
+
+
+    <h3>Upload Image</h3>
+
+      <input
+        type="file"
+        id="userImage"
+        accept="image/*"
+        capture="environment"
+        onchange="previewImage(event)"
+      >
+
+        <br><br>
+        <img
+          id="preview"
+          src=""
+          alt="Image Preview"
+          style="display:none; width:200px; border:1px solid #ccc;"
+        >
+
+    <h3>Assign To </h3>
+    <input type="text" id="assignTo" placeholder="Name " required>
+    <h3>Spare maintenace </h3>
+    <input type="text" id="spareMaintenance" placeholder=" ">
+    <br> 
+
+    <p id="msg"></p>
+    <button type="submit">Submit</button>
+
+    <!-- <button type="submit" onclick="return submitForm()">Submit</button> -->
+   
+  <a onclick="goBack()" >⬅ Back to Dashboard</a>
+  
+
+
+<script  type="module" src="../JS/report.js"></script>
+<!-- <script type="module" src="../js/dump.js"></script> -->
+
+  </form>
+
+  
+
+</body>
+</html>

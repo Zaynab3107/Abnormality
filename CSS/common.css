@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Form Container */
+#reportForm {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Input & Select Styling */
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Tag Container (Radio Buttons) */
+.tag-container {
+    background: #f1f2f6;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.radio-option {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.radio-option input {
+    margin-right: 8px;
+    accent-color: #3498db;
+}
+
+/* Department Specific Divs */
+#lineDiv, #equipmentDiv, #areaDiv {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fdfdfd;
+    border-left: 4px solid #3498db;
+}
+
+/* Image Upload Styling */
+input[type="file"] {
+    background: #fff;
+    padding: 10px;
+    border: 1px dashed #3498db;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#preview {
+    margin-top: 15px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #27ae60;
+}
+
+/* Message Text */
+#msg {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #2c3e50;
+}

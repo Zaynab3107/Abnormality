@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.topbar {
+  height: 50px;
+  background: #222;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.logout-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Main Layout */
+.container {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #f4f4f4;
+  padding: 15px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sidebar li:hover {
+  background: #bbb;
+}
+
+/* Center Content */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content img {
+  width: 250px;
+  height: auto;
+}
+
+#msg {
+  margin-top: 15px;
+  font-size: 18px;
+  color: green;
+}
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Top Bar */
+.topbar {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Layout Container */
+.main-layout {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.sidebar ul li:hover {
+    background: #f0f0f0;
+    border-left: 4px solid #1a1a1a;
+    transform: translateX(5px);
+}
+
+/* Center Content Area - THE IMAGE PART */
+.content-area {
+    flex: 1;
+    position: relative;
+    /* YAHAN APNI IMAGE KA PATH DALEIN */
+    background-image: url('../Coca\ cola2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glassmorphism Effect for Text */
+.overlay-text {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.overlay-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
